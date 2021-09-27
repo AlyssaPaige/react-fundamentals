@@ -19,20 +19,18 @@
 <!--   📜 https://developer.mozilla.org/en-US/docs/Web/API/ParentNode/append -->
 
 <html>
-    <head>
-       <script type='module'>
-           const div = document.createElement('div')
-           div.textContent = 'Hello World!'
-           div.className = 'container'
+  <head>
+    <script type="module">
+      const rootDiv = document.createElement('div')
+      rootDiv.id = 'root'
+      document.body.appendChild(rootDiv)
 
-           document.getElementById('root').append(div)
+      const divTag = document.createElement('div')
+      divTag.textContent = 'Hello World!'
+      divTag.className = 'container'
 
-        </script>
-
-    </head>
-    <body>
-        <div id='root'>
-
-        </div>
-    </body>
+      document.getElementById('root').append(divTag)
+    </script>
+  </head>
+  <body></body>
 </html>
